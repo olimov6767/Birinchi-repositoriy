@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prompt Ustasi — prompt engineering manga qo‘llanmasi</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a class="logo" href="#bosh">PROMPT <span>USTASI!</span></a>
+  <div>
+    <a class="tab" id="t-bosh" href="#bosh">Bosh sahifa</a>
+    <a class="tab" id="t-qollanma" href="#qollanma">Qo‘llanma</a>
+  </div>
+</nav>
+<main>
+
+<section class="view" id="v-bosh" aria-label="Bosh sahifa">
+  <div class="page">
+    <div class="panel hero">
+      <span class="sfx">ZAAP!</span>
+      <h1>Sun’iy intellektga to‘g‘ri gapirishni o‘rgan</h1>
+      <p>Prompt engineering — AI’dan aniq, foydali javob olish uchun so‘rovni to‘g‘ri yozish san’ati.</p>
+      <div class="bubble">Yaxshi savol — yarim javob!</div>
+    </div>
+
+    <div class="panel s3">
+      <span class="no">1</span>
+      <h2>Prompt nima?</h2>
+      <p>Prompt — siz AI’ga yozadigan ko‘rsatma. U qanchalik aniq bo‘lsa, javob shunchalik yaxshi chiqadi. Noaniq so‘rov — noaniq javob.</p>
+    </div>
+    <div class="panel s3 dark">
+      <span class="no">2</span>
+      <h2>Nega muhim?</h2>
+      <p>Bir xil model ikki xil prompt bilan yer bilan osmoncha farq qiladigan natija beradi. Prompt — sizning asosiy qurolingiz.</p>
+    </div>
+
+    <div class="panel s6" style="grid-column:span 6">
+      <h2>Kuchli promptning 4 ustuni</h2>
+      <div class="page" style="margin-top:16px;gap:16px">
+        <div class="s3"><h3>Rol</h3><p>AI kim bo‘lsin? Masalan: tajribali o‘qituvchi yoki muharrir.</p></div>
+        <div class="s3"><h3>Vazifa</h3><p>Aniq nima qilish kerak? Bitta fe’l bilan boshlang: yoz, tahlil qil, tarjima qil.</p></div>
+        <div class="s3"><h3>Kontekst</h3><p>Auditoriya, maqsad va cheklovlar. AI sizning o‘rningizda o‘ylay olmaydi.</p></div>
+        <div class="s3"><h3>Format</h3><p>Jadvalmi, ro‘yxatmi, 100 so‘zli xulosami? Shaklini ayting.</p></div>
+      </div>
+    </div>
+
+    <div class="panel s4">
+      <h2>Boshlashga tayyormisiz?</h2>
+      <p>Qo‘llanmada texnikalar va o‘zingiz sinab ko‘radigan prompt quruvchi bor.</p>
+      <a class="cta" href="#qollanma">Qo‘llanmani ochish</a>
+    </div>
+    <div class="panel s2 dark"><div class="bubble" style="color:var(--ink);margin-top:0">Mashq qil, mashq!</div></div>
+  </div>
+</section>
+
+<section class="view" id="v-qollanma" aria-label="Qo‘llanma">
+  <div class="head">
+    <h1>Qo‘llanma: texnikalar va mashq</h1>
+    <p>Avval farqni ko‘ring, keyin asosiy texnikalarni o‘rganing va oxirida o‘z promptingizni yarating.</p>
+  </div>
+  <div class="stack">
+    <div class="panel">
+      <h2>Oldin va keyin</h2>
+      <div class="ba" style="margin-top:12px">
+        <div class="bad"><h3>Zaif prompt</h3><blockquote id="bad"></blockquote></div>
+        <div><h3>Kuchli prompt</h3><blockquote id="good"></blockquote></div>
+      </div>
+      <button class="cta" id="swap" type="button">Boshqa misol</button>
+    </div>
+
+    <div class="panel">
+      <h2>Asosiy texnikalar</h2>
+      <div style="margin-top:12px">
+        <details open><summary>Zero-shot</summary><div><p>Misol bermasdan to‘g‘ridan-to‘g‘ri so‘raysiz. Oddiy vazifalar uchun yetarli.</p><pre>Quyidagi matnni 3 ta gapda xulosa qil.</pre></div></details>
+        <details><summary>Few-shot</summary><div><p>Avval 2–3 ta namuna berasiz, AI uslubni takrorlaydi.</p><pre>Xabar: “Zo‘r xizmat!” → Ijobiy
+Xabar: “Kech keldi.” → Salbiy
+Xabar: “Narxi me’yorida.” →</pre></div></details>
+        <details><summary>Chain-of-thought</summary><div><p>AI’dan bosqichma-bosqich fikrlashni so‘raysiz. Hisob-kitob va mantiqiy vazifalarda aniqlik oshadi.</p><pre>Masalani qadamma-qadam yech va oxirida javobni alohida yoz.</pre></div></details>
+        <details><summary>Rol berish</summary><div><p>AI’ga aniq mutaxassis rolini berasiz. Ohang va chuqurlik shunga moslashadi.</p><pre>Sen 10 yillik tajribali marketologsan. Mening mahsulotim uchun...</pre></div></details>
+        <details><summary>Takroriy yaxshilash</summary><div><p>Birinchi javob mukammal bo‘lmaydi. Aniq izoh bering: “qisqaroq qil”, “ohangni rasmiyroq qil”.</p></div></details>
+      </div>
+    </div>
+
+    <div class="panel dark">
+      <h2>Prompt quruvchi</h2>
+      <p>To‘rt maydonni to‘ldiring — tayyor prompt pastda paydo bo‘ladi.</p>
+      <div class="builder">
+        <div>
+          <label for="f-rol">Rol</label><input id="f-rol" placeholder="Masalan: tajribali ingliz tili o‘qituvchisi">
+          <label for="f-vazifa">Vazifa</label><input id="f-vazifa" placeholder="Masalan: 5 ta dars rejasi tuz">
+          <label for="f-kontekst">Kontekst</label><textarea id="f-kontekst" placeholder="Masalan: o‘quvchilar 12 yoshda, boshlang‘ich daraja"></textarea>
+          <label for="f-format">Format</label><input id="f-format" placeholder="Masalan: jadval, har dars 30 daqiqa">
+        </div>
+        <div>
+          <label>Prompt kuchi</label>
+          <div class="meter" id="meter" aria-live="polite"><i></i><i></i><i></i><i></i></div>
+          <pre class="out" id="out" style="color:var(--ink)">Maydonlarni to‘ldiring...</pre>
+          <button class="cta" id="copy" type="button">Nusxa olish</button>
+          <p class="toast" id="toast" role="status"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>Mashq qiling — har bir prompt sizni ustoz qiladi!</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
